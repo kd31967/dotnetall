@@ -18,13 +18,13 @@ pipeline {
 				git 'https://github.com/kd31967/dotnetall.git'
 			}
 		}
-		C:\Program Files (x86)\MSBuild\14.0\Bin
+		
 		stage('copy tomcat to workspace dir') {
 	    	steps {
 				bat 'H:\\DOTNET\\dotnetall\\NuGet.exe restore MvcMusicStore.sln'
-		        //bat "\"${tool 'MSBuild'}\" MvcMusicStore.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+		        bat "\"${tool 'MSBUILD_14'}\" MvcMusicStore.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
 				
-				bat "C:/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe  MvcMusicStore.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+				//bat "C:/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe  MvcMusicStore.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
 			}
 	    }
 		
