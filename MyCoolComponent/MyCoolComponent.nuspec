@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MvcMusicStore.CoolComponent</id>
+    <version>$version$</version>
+    <title>Cool Component</title>
+    <authors>marcel</authors>
+    <owners>marcelv</owners>
+    <licenseUrl>http://fluentBytes.com</licenseUrl>
+    <projectUrl>http://fluentbytes.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sample package part of course CD 2015</description>
+    <releaseNotes>initial package</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Cool Component</tags>
+  </metadata>
+  <files>
+    <file src="bin/release/MyCoolComponent.dll" target="lib/net40"/>
+  </files>
+</package>
