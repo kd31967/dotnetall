@@ -21,7 +21,7 @@ pipeline {
 		
 		stage('copy tomcat to workspace dir') {
 	    	steps {
-				bat 'C:\\Users\\kd319\\source\\repos\\kd31967\\dotnetall\\.nuget\\NuGet.exe restore MvcMusicStore.sln'
+				bat 'H:\\DOTNET\\dotnetall\\NuGet.exe restore MvcMusicStore.sln'
 		        bat "\"${tool 'MSBuild'}\" MvcMusicStore.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
 			}
 	    }
